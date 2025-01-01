@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Breathing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --background-color: #ffffff;
+            --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--primary-color);
+            background: var(--background-color);
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        #timer {
+            font-size: clamp(3rem, 10vw, 6rem);
+            font-weight: 300;
+            color: var(--primary-color);
+            letter-spacing: 0.05em;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            dotlottie-player {
+                width: 240px !important;
+                height: 240px !important;
+            }
+        }
+
+        @media (min-width: 2000px) {
+            #timer {
+                font-size: 8rem;
+            }
+            
+            dotlottie-player {
+                width: 400px !important;
+                height: 400px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="timer">00:60</div>
+        <dotlottie-player src="https://lottie.host/0a5cdc18-d142-42d9-90eb-a7a9d51ec8b3/cJESwIks5i.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
